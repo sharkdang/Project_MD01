@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lí sản phẩm</title>
+    <link rel="stylesheet" href="../css/product-manager.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+      <div id="app">
+        <menu class="menu">
+          <div class="logo-menu">
+            <img src="../public/img/Dropdown.png" alt="logo" />
+          </div>
+          <div class="tabs">
+            <a class="tab-item" href="../pages/dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              <span class="tabs-title">Thống kê</span>
+            </a>
+            <a class="tab-item tab-active"
+              href="../pages/category-manager.html"
+            >
+              <i class="fa-solid fa-layer-group"></i>
+              <span class="tabs-title"> Danh mục</span>
+            </a>
+            <a class="tab-item" href="../pages/product-manager.html">
+              <i class="fa-brands fa-product-hunt"></i>
+              <span class="tabs-title">Sản phẩm</span>
+            </a>
+          </div>
+        </menu>
+        <div class="main">
+          <header class="header">
+            <div class="header-right">
+              <i class="fa-solid fa-bell"></i>
+              <img class="avatar" src="../public/img/avatar.png" alt="avatar" />
+            </div>
+          </header>
+          <main class="main-content">
+            <!-- Tiêu đề trang -->
+            <div class="content-header">
+              <h3 class="title">Sản phẩm</h3>
+              <button onclick="handleShowModal()" class="button">
+                Thêm mới sản phẩm
+              </button>
+            </div>
+            <!-- Thanh chức năng -->
+            <div class="content-toolbar">
+              <select class="select-status">
+                <option value="">Lọc theo danh mục</option>
+                <option value="">#</option>
+                <option value="">#</option>
+              </select>
+              <select class="select-status" id="filter-status">
+                <option value="all">Lọc theo trạng thái</option>
+                <option value="active">Đang hoạt động</option>
+                <option value="inactive">Dừng hoạt động</option>
+              </select>
+
+              <div class="input-seach-container">
+                <input
+                  class="input-seach"
+                  type="text"
+                  placeholder="Tìm kiếm sản phẩm theo tên"
+                />
+                <i class="icon-seach fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+            <!--danh sách  -->
+            <div class="list-category">
+              <table border="1" class="table">
+                <thead class="thead">
+                  <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Giảm giá</th>
+                    <th>Trạng thái</th>
+                    <th>Chức năng</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr>
+                    <td>SP001</td>
+                    <td>Iphone 12 Pro</td>
+
+                    <td>12.000.000 đ</td>
+                    <td>10</td>
+                    <td>0%</td>
+                    <td>
+                      <div class="box-status bg-active">
+                        <div class="dot dot-active"></div>
+                        <span class="status-text text-active">
+                          Đang hoạt động
+                        </span>
+                      </div>
+                    </td>
+                    <td style="width: 196px">
+                      <i class="fa-solid fa-trash"></i>
+                      <i class="fa-solid fa-pen"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>SP002</td>
+                    <td>Áo sơ mi</td>
+
+                    <td>500.000 đ</td>
+                    <td>100</td>
+                    <td>5%</td>
+                    <td>
+                      <div class="box-status bg-inactive">
+                        <div class="dot dot-inactive"></div>
+                        <span class="status-text text-inactive">
+                          Ngừng hoạt động
+                        </span>
+                      </div>
+                    </td>
+                    <td style="width: 196px">
+                      <i class="fa-solid fa-trash"></i>
+                      <i class="fa-solid fa-pen"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>SP003</td>
+                    <td>Quần short</td>
+
+                    <td>5.000.000 đ</td>
+                    <td>10</td>
+                    <td>0%</td>
+                    <td>
+                      <div class="box-status bg-active">
+                        <div class="dot dot-active"></div>
+                        <span class="status-text text-active">
+                          Đang hoạt động
+                        </span>
+                      </div>
+                    </td>
+                    <td style="width: 196px">
+                      <i class="fa-solid fa-trash"></i>
+                      <i class="fa-solid fa-pen"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <button><i class="fa-solid fa-angle-left"></i></button>
+              <button>1</button>
+              <button>2</button>
+              <button class="button-active">3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>...</button>
+              <button>20</button>
+              <button><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <!-- Overlay -->
+            <div class="overlay" style="display:none" id="form-add-product">
+              <form class="form" onsubmit="handleSubmit(event)">
+                <div class="overlay-header">
+                  <span id="modal-title">Thêm mới sản phẩm</span>
+                  <button
+                    type="button"
+                    onclick="handleCloseModal()"
+                    class="btn-close"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="overlay-main">
+                  <div class="content">
+                    <label class="overlay-label"
+                      >Mã sản phẩm <span class="">*</span></label
+                    >
+                    <input
+                      id="product-code"
+                      class="overlay-input"
+                      type="text"
+                    />
+                    <small class="error-message" id="error-code"></small>
+                  </div>
+                  <div class="content">
+                    <label class="overlay-label"
+                      >Tên sản phẩm <span class="">*</span></label
+                    >
+                    <input
+                      id="product-name"
+                      class="overlay-input"
+                      type="text"
+                    />
+                    <small class="error-message" id="error-name"></small>
+                  </div>
+                  <div class="content">
+                    <label class="overlay-label"
+                      >Danh mục <span class="">*</span></label
+                    >
+                    <input
+                      id="product-category"
+                      class="overlay-input"
+                      type="text"
+                    />
+                    <small class="error-message" id="error-category"></small>
+                  </div>
+
+                  <div>
+                    <label class="status">Trạng thái</label>
+                    <div class="status-group">
+                      <label class="radio-option">
+                        <input
+                          checked
+                          value="active"
+                          class="radio"
+                          type="radio"
+                          name="status"
+                        />
+                        Đang hoạt động
+                      </label>
+                      <label class="radio-option">
+                        <input
+                          value="inactive"
+                          class="radio"
+                          type="radio"
+                          name="status"
+                        />
+                        Ngừng hoạt động
+                      </label>
+                    </div>
+                  </div>
+                  <div class="overlay-input-three-container">
+                    <label class="overlay-label"
+                      >Số lượng
+                      <input id="product-quantity" class="overlay-input-three" type="number"
+                    /></label>
+                    <label class="overlay-label"
+                      >Giá <input id="product-price" class="overlay-input-three" type="number"
+                    /></label>
+                    <label class="overlay-label"
+                      >Giảm giá
+                      <input id="product-discount" class="overlay-input-three" type="number"
+                    /></label>
+                  </div>
+                  <div class="overlay-input-full">
+                    <label class="overlay-label"
+                      >Hình ảnh <span class="">*</span>
+                    </label>
+                    <input id="product-image" class="overlay-input-image" type="url" />
+                    <small class="error-message" id="error-img"></small>
+                  </div>
+                  <div class="overlay-input-full">
+                    <label class="overlay-label">Chi tiết sản phẩm </label>
+
+                    <input id="product-detail" class="overlay-input-detail" type="text" />
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <button
+                    type="button"
+                    onclick="handleCloseModal()"
+                    class="btn-cancel"
+                  >
+                    Hủy
+                  </button>
+                  <button class="btn-add" type="submit">Thêm</button>
+                </div>
+              </form>
+            </div>
+          </main>
+        </div>
+      </div>
+      <script src="../js/product-manager.js"></script>
+  </body>
+</html>

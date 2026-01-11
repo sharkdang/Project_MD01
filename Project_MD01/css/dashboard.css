@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+
+
+#app{
+    display:flex;
+}
+
+.menu {
+    height: 100vh;
+    width:240px;
+    border-right: 1px solid #f6f8f9;
+}
+
+.logo-menu img{
+    width: 152px;
+    height: 40px;
+    margin: 14px 0 16px 0;
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.tabs {
+    display:flex;
+    flex-direction: column;
+    padding:16px;
+    gap:8px;
+}
+
+.tab-item {
+    height:40px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:8px;
+    padding: 4px 12px;
+    border-radius: 5px;
+}
+.tabs a{
+    text-decoration: none;
+}
+.tabs a:hover{
+    cursor: pointer;
+    background-color: #d7edff;
+    transition: all 0.3s linear;
+}
+
+.fa-solid ,
+.fa-brands{
+    font-size: 24px;
+    color:#3f3f46;
+}
+
+.tab-active 
+.tab-active > i {
+    background-color: #d7edff;
+    color: #0e73f6 !important;
+    font-weight: 600;
+}
+
+.main {
+    flex:1;
+}
+
+.header {
+    height: 56px;
+    display:flex;
+    justify-content: flex-end;
+    padding: 0 24px;
+    align-items: center;
+    border-bottom: 1px solid #f6f8f9;
+}
+
+.header .header-right{
+    display:flex;
+    align-items: center;
+    gap:12px;
+}
+
+.header-right .avatar{
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+}
+
+.header-right .fa-bell {
+  color: #b0babf;
+}
+
+
+
+
+.main-content{
+    height: calc(100vh - 56px);
+    padding:24px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.content-header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.content-header .title{
+    line-height: 24px;
+    font-weight:bold ;
+    color:#252c32;
+    font-size: 24px;
+    padding: 24px;
+}
+
+.button{
+    height: 43px;
+    width: 240px;
+    border-radius: 6px;
+    padding:8px 12px;
+    font-size: 14px;
+    border:1px solid  transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    margin-right:24px ;
+}
+
+
+.button:hover{
+    background-color: #0e73f6;
+}
+
+
+/* Nhấn giữ  */
+.button:active{
+    background-color: #f26602;
+}
+

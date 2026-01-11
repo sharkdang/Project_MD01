@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.header {
+    width: 100%;
+    max-width: 1280px;
+    margin-top: 96px;        
+    padding: 0 80px;       
+    text-align: center;
+    margin-bottom: 24px;
+}
+.register-container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}  
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 8px;
+}
+.description {
+    font-size: 20px;
+    color: #667085;
+}
+.form {
+    width:1280px;             
+    margin-top: 24px;          
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px;
+}
+.form-body {
+    width: 360px;             
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.form-input {
+    height: 48px;
+    width:100%;
+    border-radius: 12px;
+    border:1px solid #D0D5DD;
+    outline:none;
+    padding:0 16px;
+}
+
+.form-group {
+    grid-column: span 2;
+}
+.form-label {
+    color:#344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+.form-function {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remember-account{
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    padding: 24px;
+    gap: 8px;
+}
+.remember-account strong{
+    color:#2563eb;
+}
+
+
+.input-checkbox {
+    margin-right: 5px;
+}
+
+.form-button {
+    height:48px;
+    background-color:#007AFF;
+    border-radius: 12px;
+    width:100%;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    border:1px solid transparent;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+.form-redirect {
+    text-align: center;
+    
+}
+
+.form-redirect span {
+    color:#64748b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-redirect a,
+.forgot-account a {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Hiển thị lỗi khi ko nhập dữ liệu */
+.error-message {
+    display: none;
+  color: #DC2626;
+  font-size: 12px;
+  
+}
+
+.input-error {
+    border: 1px solid #DC2626;
+    margin-bottom: 8px;
+}
+
+/* Reponsive */
+@media (max-width: 576px) {
+    .register-container {
+        padding: 24px 20px;
+    }
+
+    .form-body {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        grid-column: span 1;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+    .description{
+        font-size: 18px;
+    }
+    
+}

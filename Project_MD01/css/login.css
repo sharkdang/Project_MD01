@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.login-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    width:535px;
+}
+
+.form-header {
+    margin-bottom: 64px;
+}
+
+.title {
+    color:#090914;
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.description {
+    color:#52525b;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display:flex;
+    flex-direction: column;
+    gap:11px;
+}
+
+.form-label {
+    color:#090914;
+    font-weight: 600;
+}
+
+.form-input {
+    height: 60px;
+    width:100%;
+    border-radius: 12px;
+    border:1px solid #cbd5e1;
+    outline:none;
+    padding:0 16px;
+}
+
+.form-function {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.remember-account {
+    display:flex;
+    align-items: center;
+    gap:9px;
+}
+
+.input-checkbox {
+    height: 19px;
+    width:19px;
+}
+
+.remember-account span{
+    color:#18181b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-button {
+    height:55px;
+    background-color: #2563eb;
+    border-radius: 12px;
+    width:100%;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    border:1px solid transparent;
+    cursor: pointer;
+    margin-bottom: 34px;
+}
+
+.form-redirect {
+    text-align: center;
+}
+
+.form-redirect span {
+    color:#64748b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-redirect a,
+.forgot-account a {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* Show lỗi */
+.error-message {
+  color: #DC2626;
+  font-size: 12px;
+  display: none;
+}
+
+input.error {
+  border: 1px solid #DC2626;
+  margin-bottom: 8px;
+}
+
+
+/* Reponsive */
+@media (max-width: 576px) {
+    .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .form-body {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        gap: 8px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-input {
+        height: 50px;
+        padding: 0 12px;
+        font-size: 14px;
+    } 
+
+    .remember-account span {
+        font-size: 12px;
+    }
+
+    .form-button {
+        height: 50px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .form-redirect span {
+        font-size: 12px;
+    }
+
+    .form-redirect a,
+    .forgot-account a {
+        font-size: 12px;
+    }
+    /* Show lỗi */
+    .error-message {
+      font-size: 11px;
+    }   
+}
