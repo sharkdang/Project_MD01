@@ -56,7 +56,7 @@ form.addEventListener("submit", function (event) {
     showError(emailInput,
          "error-email", 
          "Email hoặc mật khẩu không đúng");
-    showError(passwordInput, "error-password", "");
+    showError(passwordInput, "error-password");
     return;
   }
 
@@ -66,14 +66,15 @@ form.addEventListener("submit", function (event) {
     JSON.stringify({
       id: user.id,
       email: user.email,
-      name: `${user.lastName} ${user.firstName}`
+      name: `${user.lastName} ${user.firstName}`,
+      password: user.password,
     })
   );
 
   alert("Đăng nhập thành công!");
 
   // Chuyển sang trang quản lý
-  window.location.href = "../pages/category-manager.html";
+  window.location.href = "./dashboard.html";
 });
 
 // HÀM HIỂN THỊ LỖI 

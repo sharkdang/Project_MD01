@@ -2,7 +2,7 @@
 const formCategory = document.querySelector("#form-add-category");
 const categoryCodeInput = document.querySelector("#category-code");
 const categoryNameInput = document.querySelector("#category-name");
-const tbodyElement = document.querySelector(".tbody");
+const tbodyElement = document.querySelector(".tbody"); //Render lại danh sách danh mục
 const modalTitle = document.querySelector("#modal-title");
 
 
@@ -11,7 +11,7 @@ const modalTitle = document.querySelector("#modal-title");
 
   let categoryStatuesValue = "active";
 
-// Mảng chứa danh sách danh mục Data
+// Mảng chứa danh sách danh mục Data (biến và dữ liệu)
 let categories =JSON.parse(localStorage.getItem("categories")) || [];
 // Biến lưu ID danh mục đang chỉnh sửa (null nếu thêm mới)
 let editingCategoryId = null;
@@ -32,10 +32,13 @@ categoryStatues.forEach(function (item) {
 function handleShowModal() {
   // Reset form khi mở modal mới
   editingCategoryId = null;
+
   categoryCodeInput.value = "";
   categoryNameInput.value = "";
+  //Reset lỗi 
   clearError(categoryCodeInput, "error-code");
   clearError(categoryNameInput, "error-name");
+  // Mặc định radio trạng thái là active
   document.querySelector("input[name=status][value=active]").checked = true;
   categoryStatuesValue = "active";
   // Thay đổi tiêu đề thành "Thêm mới danh mục"
@@ -237,7 +240,7 @@ tbodyElement.addEventListener("click", function (event) {
     const confirmDelete = confirm("Bạn có chắc chắn muốn xóa danh mục này?");
     if (!confirmDelete) return;
     // Loại bỏ danh mục bị xóa
-    categories = categories.filter(item => item.id !== id);
+    categories = categories.filter(item => item.id !== id); //Trả về true fall
     
     // Cập nhật lại localStorage
     localStorage.setItem("categories", JSON.stringify(categories));

@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang đăng kí</title>
-    <link rel="stylesheet" href="../css/register.css">
-     
-</head>
-<body>
-     <div class="register-container">
-        <form class="form">
-            <header class="header">
-                <h3 class="title">Đăng kí tài khoản</h3>
-                <p class="description">
-                    Đăng kí tài khoản để sử dụng dịch vụ
-                </p>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="register-container">
+      <form class="form">
+        <header class="header">
+          <h3 class="title">Đăng kí tài khoản</h3>
+          <p class="description">Đăng kí tài khoản để sử dụng dịch vụ</p>
         </header>
-            <main class="form-body">
-                <div class="form-action">
-                    <label class="form-label" for="lastName">Họ và tên đệm</label>
-                    <input id="lastName" class="form-input" type="text" placeholder="Nhập họ và tên đệm">
-                    <span class="error-message" id="error-lastName"></span>
-                </div>
-                <div>
-                    <label class="form-label" for="firstName">Tên</label>
-                    <input id="firstName" class="form-input" type="text" placeholder="Nhập tên">
-                    <span class="error-message" id="error-firstName"></span>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="email" >Email</label>
-                    <input id="email" class="form-input" type="email" placeholder="you@company.com" />
-                    <span class="error-message" id="error-email"></span>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="password">Mật khẩu</label>
-                    <input id="password" class="form-input"  type="password" placeholder="Nhập mật khẩu (tối thiểu 8 ký tự)"/>
-                    <span class="error-message" id="error-password"></span>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="confirmPassword">Xác nhận mật khẩu</label>
-                    <input id="confirmPassword" class="form-input" type="password" placeholder="Nhập lại mật khẩu"/>
-                    <span class="error-message" id="error-confirmPassword"></span>
-                </div>
-                
-            </main>
-            <div class="form-function">
-                    <div class="remember-account">
-                        <input id="policy" class="input-checkbox" type="checkbox"/>
-                        <span> Bạn đồng ý với <strong> chính sách và điều khoản</strong> </span>
-                        <span class="error-message" id="error-policy"></span>
-                    </div>
-                </div>
-            <footer class="form-footer">
-                <button class="form-button" type="submit">Đăng kí </button>
-                <p class="form-redirect">
-                    <span>Bạn đã có tài khoản ? <a href="./login.html">Đăng nhập</a></span>
-                </p>
-            </footer>
-        </form>
+        <main class="form-body">
+          <div class="form-action">
+            <label class="form-label" for="lastName">Họ và tên đệm</label>
+            <input
+              id="lastName"
+              class="form-input"
+              type="text"
+              placeholder="Nhập họ và tên đệm"
+            />
+            <span class="error-message" id="error-lastName"></span>
+          </div>
+          <div>
+            <label class="form-label" for="firstName">Tên</label>
+            <input
+              id="firstName"
+              class="form-input"
+              type="text"
+              placeholder="Nhập tên"
+            />
+            <span class="error-message" id="error-firstName"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input
+              id="email"
+              class="form-input"
+              type="email"
+              placeholder="you@company.com"
+            />
+            <span class="error-message" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Mật khẩu</label>
+            <input
+              id="password"
+              class="form-input"
+              type="password"
+              placeholder="Nhập mật khẩu (tối thiểu 8 ký tự)"
+            />
+            <span class="error-message" id="error-password"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword"
+              >Xác nhận mật khẩu</label
+            >
+            <input
+              id="confirmPassword"
+              class="form-input"
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+            />
+            <span class="error-message" id="error-confirmPassword"></span>
+          </div>
+        </main>
+        <div class="form-function">
+          <div class="remember-account">
+            <input id="policy" class="input-checkbox" type="checkbox"   />
+            <span>
+              Bạn đồng ý với <strong> chính sách và điều khoản</strong>
+            </span>
+            
+          </div>
+        </div>
+        <footer class="form-footer">
+          <button class="form-button" type="submit" >Đăng kí</button>
+          <p class="form-redirect">
+            <span
+              >Bạn đã có tài khoản ? <a href="./login.html">Đăng nhập</a></span
+            >
+          </p>
+        </footer>
+      </form>
     </div>
     <script src="../js/register.js"></script>
-</body>
+  </body>
 </html>
